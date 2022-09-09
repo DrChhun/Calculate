@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <title>Document</title>
+</head>
+<body class="w-full">
+    <!-- header -->
+    <nav>
+        <div class="p-8 flex md:p-4">
+                <div class="m-auto">
+                    <input class="border-2 border-black active:outline-none md:px-16" id="user_age" class="text-center p-2 rounded-xl m-auto mr-8" type="number" name="age" placeholder="Input your age">
+                    <button type="button" class="b border-2 border-black bg-black text-white p-2" onclick="sage()">Calculate</button>
+                </div>
+        </div>
+    </nav>
+
+    
+<div id="controls-carousel" class="relative" data-carousel="static">
+    <!-- Carousel wrapper -->
+    <div class="relative h-screen overflow-hidden rounded-lg md:h-screen">
+         <!-- Item 1 -->
+        <div class="p-16 flex flex-col duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="active">
+            <!-- mercury -->
+            <img class="flex m-auto md:h-4/6" src="public/mercury1.png" alt="">
+            <h1 class="text-5xl font-bold text-center"><span class="text-lg md:text-4xl" id="mercury"></span></h1>
+        </div>
+        <!-- Item 2 -->
+        <div class="p-16 flex flex-col duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20" data-carousel-item="">
+            <!-- venus -->
+            <img class="flex m-auto md:h-4/6" src="public/vernus2.png" alt="">
+            <h1 class="text-5xl font-bold text-center"><span class="text-lg md:text-4xl" id="venus"></span></h1>
+        </div>
+        <!-- Item 3 -->
+        <div class="p-16 flex flex-col duration-700 ease-in-out text-center absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
+            <!-- earth -->
+            <img class="flex m-auto md:h-4/6" src="Public/earth3.png" alt="">
+            <h1 class="text-5xl font-bold text-center"><span class="text-lg md:text-4xl" id="earth"></span></h1>
+        </div>
+        <!-- Item 4 -->
+        <div class="p-16 flex flex-col hidden duration-700 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
+            <!-- moon -->
+            <img class="flex m-auto md:h-4/6" src="public/moon4.png" alt="">
+            <h1 class="text-5xl font-bold text-center"><span class="text-lg md:text-4xl" id="moon"></span></h1>
+        </div>
+        <!-- Item 5 -->
+        <div class="p-16 flex flex-col hidden duration-700 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
+            <!-- mars -->
+            <img class="flex m-auto md:h-4/6" src="public/mars5.png" alt="">
+            <h1 class="text-5xl font-bold text-center"><span class="text-lg md:text-4xl" id="mars"></span></h1>
+        </div>
+        <!-- Item 6 -->
+        <div class="p-16 flex flex-col hidden duration-700 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
+            <!-- jupiter -->
+            <img class="flex m-auto md:h-4/6" src="public/jupiter6.png" alt="">
+            <h1 class="text-5xl font-bold text-center"><span class="text-lg md:text-4xl" id="jupiter"></span></h1>
+        </div>
+        <!-- Item 7 -->
+        <div class="p-16 flex flex-col hidden duration-700 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
+            <!-- saturn -->
+            <img class="flex m-auto " src="public/saturn7.png" alt="">
+            <h1 class="text-5xl font-bold text-center"><span class="text-lg md:text-4xl" id="saturn"></span></h1>
+        </div>
+        <!-- Item 8 -->
+        <div class="p-16 flex flex-col hidden duration-700 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
+            <!-- uranus -->
+            <img class="flex m-auto" src="public/uranus8.png" alt="">
+            <h1 class="text-5xl font-bold text-center"><span class="text-lg md:text-4xl" id="uranus"></span></h1>
+        </div>
+        <!-- Item 9 -->
+        <div class="p-16 flex flex-col hidden duration-700 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
+            <!-- neptune -->
+            <img class="flex m-auto md:h-4/6" src="public/neptune9.png" alt="">
+            <h1 class="text-5xl font-bold text-center"><span class="text-lg md:text-4xl" id="neptune"></span></h1>
+        </div>
+    </div>
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev="">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next="">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+    
+    
+</body>
+<script src="app.js"></script>
+</html>
